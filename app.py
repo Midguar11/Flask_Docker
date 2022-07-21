@@ -8,7 +8,7 @@ redis = Redis(host='redis', port=6379)
 def hello():
     redis.incr('hits')
     counter = str(redis.get('hits'),'utf-8')
-    return "Welcome to Devopsempire!, This webpage has been viewed "+counter+" time(s)"
+    return "Welcome to Devopsempire!, This webpage has been viewed "+counter+" time(s). Menet közben is megy az update!! "
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True) 

@@ -11,7 +11,6 @@ pipeline {
        stage('Docker Run'){
             agent any       
             steps{
-                sh 'sudo docker container prune'
                 sh 'sudo docker-compose up -d'
                 sh 'sudo docker compose ps'
             }
